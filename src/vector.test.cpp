@@ -17,7 +17,6 @@
  * Test the inizialisation of a
  * two dimensional vector and its
  * print function.
- *
  */
 TEST(printTest, vectorTests) {
 
