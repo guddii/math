@@ -19,6 +19,7 @@ TEST(vectorTests, atTests) {
     Vector b(0.0, 3.0);
      EXPECT_EQ(b.at(0), 0);
      EXPECT_EQ(b.at(1), 3);
+
 }
 
 TEST(vectorTests, setTests) {
