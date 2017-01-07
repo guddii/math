@@ -38,6 +38,15 @@ double Vector::at(size_t index) const {
 };
 
 /**
+ *  @brief Set values within the vector
+ *  @param index Index within the array
+ *  @param value The new value
+ */
+void Vector::set(size_t index, double value) {
+    coordinates[index] = value;
+}
+
+/**
  *  @brief Get values from vector
  *
  *  Get or set values from the vector with
@@ -48,15 +57,6 @@ double Vector::at(size_t index) const {
 */
 double &Vector::at(size_t index) {
     return coordinates[index];
-}
-
-/**
- *  @brief Set values within the vector
- *  @param index Index within the array
- *  @param value The new value
- */
-void Vector::set(size_t index, double value) {
-    coordinates[index] = value;
 }
 
 /**
