@@ -10,6 +10,7 @@
 #ifndef MATH_MATRIX_HPP
 #define MATH_MATRIX_HPP
 
+#include "vector.hpp"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -27,6 +28,10 @@ public:
     double &at(size_t row, size_t col);
 
     double norm() const;
+
+    Matrix transpose() const;
+
+    Vector multiply(const Vector &b) const;
 
     void print(std::ostream &out) const;
 

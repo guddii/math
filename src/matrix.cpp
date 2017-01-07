@@ -16,10 +16,10 @@
  *  Construct a matrix containing
  *  the given parameters.
  *
- * @param a11 A_11 Value
- * @param a12 A_12 Value
- * @param a21 A_21 Value
- * @param a22 A_22 Value
+ * @param a11 a_11 Value
+ * @param a12 a_12 Value
+ * @param a21 a_21 Value
+ * @param a22 a_22 Value
  */
 Matrix::Matrix(double a11, double a12, double a21, double a22) {
 
@@ -61,7 +61,7 @@ double Matrix::at(size_t row, size_t col) const {
 }
 
 /**
- *  @brief Get or set values from matrix
+ *  @brief Get values from matrix
  *
  *  Get or set values from the matrix with
  *  w/o copying the array.
@@ -95,15 +95,36 @@ double Matrix::norm() const {
 }
 
 /**
+ * @brief Transpose a matrix
+ * @return A transposed matrix
+ */
+Matrix Matrix::transpose() const {
+    return *this;
+}
+
+/**
  * Print values on any stream
  * @param out The stream to be printed on
  */
 void Matrix::print(std::ostream &out) const {
-    out << std::endl;
+    out << "(";
     for (int i = 0; i < 2; ++i) {
         for (int j = 0; j < 2; ++j) {
-            out << matrix[i][j] << ' ';
+            out << matrix[i][j];
+            if (!(i == 1 && j == 1)) {
+                out << " ";
+            }
         }
-        out << std::endl;
     }
+    out << ")" << std::endl;
+}
+
+/**
+ * @brief Multiply a matrix and a vector
+ * @param b A vector object
+ * @return The product
+ */
+Vector Matrix::multiply(const Vector &b) const {
+    // TODO : Add logic
+    return b;
 }

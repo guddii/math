@@ -38,7 +38,7 @@ double Vector::at(size_t index) const {
 };
 
 /**
- *  @brief Get or set values from vector
+ *  @brief Get values from vector
  *
  *  Get or set values from the vector with
  *  w/o copying the array.
@@ -78,6 +78,28 @@ double Vector::norm() const {
 void Vector::print(std::ostream &out) const {
     out << "(" << coordinates[0] << " "
         << coordinates[1] << ")" << std::endl;
+}
+
+/**
+ * @brief Calculate the scalar product of two vectors
+ * @param a Vector a
+ * @param b Vector b
+ * @return The product of a and b
+ */
+double Vector::dot(const Vector &a, const Vector &b) {
+    // TODO : Add logic
+    return 1;
+}
+
+/**
+ * @brief Calculate the sum of two vectors
+ * @param a Vector a
+ * @param b Vector b
+ * @return The sum of a and b
+ */
+Vector Vector::add(const Vector &a, const Vector &b) {
+    // TODO : Add logic
+    return Vector(1, 1);
 }
 
 

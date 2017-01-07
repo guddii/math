@@ -20,13 +20,17 @@ public:
 
     double at(size_t index) const;
 
-    double &at(size_t index);
-
     void set(size_t index, double value);
+
+    double &at(size_t index);
 
     double norm() const;
 
     void print(std::ostream &out) const;
+
+    double dot(const Vector &a, const Vector &b);
+
+    Vector add(const Vector &a, const Vector &b);
 
 private:
 
