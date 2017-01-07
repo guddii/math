@@ -18,6 +18,8 @@ public:
 
     Vector(double x, double y);
 
+    ~Vector();
+
     double at(size_t index) const;
 
     void set(size_t index, double value);
@@ -27,8 +29,6 @@ public:
     double norm() const;
 
     void print(std::ostream &out) const;
-
-    Vector add(const Vector &a, const Vector &b);
 
 private:
 

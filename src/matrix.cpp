@@ -35,6 +35,8 @@ Matrix::Matrix(double a11, double a12, double a21, double a22) {
 
 }
 
+Matrix::~Matrix() {}
+
 /**
  * @brief Set values within the matrix
  * @param row Row within the matrix

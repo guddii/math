@@ -11,7 +11,7 @@
 #include "../src/global.cpp"
 #include "gtest/gtest.h"
 
-TEST(vectorTests, atTests) {
+TEST(vectorTests, atTest) {
     Vector a(0.0, 2.0);
     EXPECT_EQ(a.at(0), 0);
     EXPECT_EQ(a.at(1), 2);
@@ -20,20 +20,28 @@ TEST(vectorTests, atTests) {
     EXPECT_EQ(b.at(1), 3);
 }
 
-TEST(vectorTests, setTests) {
+TEST(vectorTests, setTest) {
     Vector c(0.0, 2.0);
     c.set(1, 5.0);
     EXPECT_EQ(c.at(1), 5);
 }
 
-TEST(vectorTests, normTests) {
+TEST(vectorTests, normTest) {
     Vector d(0.0, 3.0);
     EXPECT_EQ(d.norm(), 3);
 }
 
-TEST(vectorTests, dotTests) {
+TEST(vectorTests, dotTest) {
     Vector e(0.0, 3.0);
     Vector f(0.0, 3.0);
     double r = dot(e, f);
     EXPECT_EQ(r, 9);
+}
+
+TEST(vectorTests, addTest) {
+    Vector e(3.0, 3.0);
+    Vector f(6.0, 3.0);
+    Vector g = add(e, f);
+    EXPECT_EQ(g.at(0), 9);
+    EXPECT_EQ(g.at(1), 6);
 }

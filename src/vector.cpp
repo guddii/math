@@ -24,6 +24,8 @@ Vector::Vector(double x, double y) {
     this->set(1, y);
 }
 
+Vector::~Vector() {}
+
 /**
  *  @brief Get values from vector
  *
@@ -79,16 +81,3 @@ void Vector::print(std::ostream &out) const {
     out << "(" << coordinates[0] << " "
         << coordinates[1] << ")" << std::endl;
 }
-
-/**
- * @brief Calculate the sum of two vectors
- * @param a Vector a
- * @param b Vector b
- * @return The sum of a and b
- */
-Vector Vector::add(const Vector &a, const Vector &b) {
-    // TODO : Add logic
-    return Vector(1, 1);
-}
-
-

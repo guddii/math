@@ -24,7 +24,7 @@ TEST(matrixTests, setTest) {
     EXPECT_EQ(m.at(0, 0), 5.0);
 }
 
-TEST(matrixTests, normTests) {
+TEST(matrixTests, normTest) {
     Matrix m(0.0, 3.0, 3.0, 0.0);
     EXPECT_EQ(m.norm(), 3);
 }

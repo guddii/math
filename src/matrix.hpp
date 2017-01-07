@@ -21,6 +21,8 @@ public:
 
     Matrix(double a11, double a12, double a21, double a22);
 
+    ~Matrix();
+
     void set(size_t row, size_t col, double value);
 
     double at(size_t row, size_t col) const;
