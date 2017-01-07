@@ -67,7 +67,6 @@ void Vector::set(size_t index, double value) {
  *
  * @return The euclidean norm
  */
-
 double Vector::norm() const {
     return sqrt(coordinates[0] * coordinates[0] + coordinates[1] * coordinates[1]);
 }

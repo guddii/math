@@ -6,7 +6,9 @@
  *  @see https://github.com/guddii/math
  *  @bug https://github.com/guddii/math/issues
  */
+
 #include "matrix.hpp"
+#include "cmath"
 
 /**
  *  @brief Matrix constructor
@@ -25,10 +27,10 @@ Matrix::Matrix(double a11, double a12, double a21, double a22) {
 
     matrix[0].resize(2);
     this->set(0, 0, a11);
-    this->set(0, 1, a12);
+    this->set(0, 1, a21);
 
     matrix[1].resize(2);
-    this->set(1, 0, a21);
+    this->set(1, 0, a12);
     this->set(1, 1, a22);
 
 }
@@ -70,6 +72,26 @@ double Matrix::at(size_t row, size_t col) const {
  */
 double &Matrix::at(size_t row, size_t col) {
     return matrix[row][col];
+}
+
+/**
+ * @brief Calculate the euclidean norm
+ *
+ * Calculate the euclidean norm from the
+ * values within the matrix.
+ *
+ * @return The euclidean norm
+ */
+double Matrix::norm() const {
+    double n = 1;
+    for (int j = 0; j < 2; ++j) {
+        double helper = 0;
+        for (int i = 0; i < 2; ++i) {
+            helper = helper + matrix[i][j];
+        }
+        n = n * helper;
+    }
+    return sqrt(n);
 }
 
 /**

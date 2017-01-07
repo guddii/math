@@ -26,6 +26,8 @@ public:
 
     double &at(size_t row, size_t col);
 
+    double norm() const;
+
     void print(std::ostream &out) const;
 
 private:
