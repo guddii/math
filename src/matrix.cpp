@@ -61,20 +61,6 @@ double Matrix::at(size_t row, size_t col) const {
 }
 
 /**
- *  @brief Get values from matrix
- *
- *  Get or set values from the matrix with
- *  w/o copying the array.
- *
- * @param row Row within the matrix
- * @param col Column within the matrix
- * @return Value form matrix
- */
-double &Matrix::at(size_t row, size_t col) {
-    return matrix[row][col];
-}
-
-/**
  * @brief Calculate the euclidean norm
  *
  * Calculate the euclidean norm from the
@@ -92,6 +78,20 @@ double Matrix::norm() const {
         n = n * helper;
     }
     return sqrt(n);
+}
+
+/**
+ *  @brief Get values from matrix
+ *
+ *  Get or set values from the matrix with
+ *  w/o copying the array.
+ *
+ * @param row Row within the matrix
+ * @param col Column within the matrix
+ * @return Value form matrix
+ */
+double &Matrix::at(size_t row, size_t col) {
+    return matrix[row][col];
 }
 
 /**
