@@ -57,3 +57,31 @@ void Matrix::set(size_t row, size_t col, double value) {
 double Matrix::at(size_t row, size_t col) const {
     return matrix[row][col];
 }
+
+/**
+ *  @brief Get or set values from matrix
+ *
+ *  Get or set values from the matrix with
+ *  w/o copying the array.
+ *
+ * @param row Row within the matrix
+ * @param col Column within the matrix
+ * @return Value form matrix
+ */
+double &Matrix::at(size_t row, size_t col) {
+    return matrix[row][col];
+}
+
+/**
+ * Print values on any stream
+ * @param out The stream to be printed on
+ */
+void Matrix::print(std::ostream &out) const {
+    out << std::endl;
+    for (int i = 0; i < 2; ++i) {
+        for (double n : matrix[i]) {
+            out << n << ' ';
+        }
+        out << std::endl;
+    }
+}

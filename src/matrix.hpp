@@ -24,6 +24,10 @@ public:
 
     double at(size_t row, size_t col) const;
 
+    double &at(size_t row, size_t col);
+
+    void print(std::ostream &out) const;
+
 private:
 
     std::vector<std::vector<double> > matrix;
