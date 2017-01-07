@@ -81,17 +81,6 @@ void Vector::print(std::ostream &out) const {
 }
 
 /**
- * @brief Calculate the scalar product of two vectors
- * @param a Vector a
- * @param b Vector b
- * @return The product of a and b
- */
-double Vector::dot(const Vector &a, const Vector &b) {
-    // TODO : Add logic
-    return 1;
-}
-
-/**
  * @brief Calculate the sum of two vectors
  * @param a Vector a
  * @param b Vector b

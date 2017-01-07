@@ -28,8 +28,6 @@ public:
 
     void print(std::ostream &out) const;
 
-    double dot(const Vector &a, const Vector &b);
-
     Vector add(const Vector &a, const Vector &b);
 
 private:

@@ -8,6 +8,7 @@
  */
 
 #include "../src/vector.hpp"
+#include "../src/global.cpp"
 #include "gtest/gtest.h"
 
 TEST(vectorTests, atTests) {
@@ -28,4 +29,11 @@ TEST(vectorTests, setTests) {
 TEST(vectorTests, normTests) {
     Vector d(0.0, 3.0);
     EXPECT_EQ(d.norm(), 3);
+}
+
+TEST(vectorTests, dotTests) {
+    Vector e(0.0, 3.0);
+    Vector f(0.0, 3.0);
+    double r = dot(e, f);
+    EXPECT_EQ(r, 9);
 }

@@ -1,5 +1,6 @@
 #include "vector.hpp"
 #include "matrix.hpp"
+#include "global.cpp"
 
 /**
  * Entry point of this program
