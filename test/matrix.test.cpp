@@ -28,3 +28,11 @@ TEST(matrixTests, normTest) {
     Matrix m(0.0, 3.0, 3.0, 0.0);
     EXPECT_EQ(m.norm(), 3);
 }
+
+TEST(matrixTests, multiplyTest) {
+    Matrix m(-1.0, 1.0, 2.0, 0.0);
+    EXPECT_EQ(m.multiply(Vector(2.0, 0.0)).at(0), -2);
+    EXPECT_EQ(m.multiply(Vector(2.0, 0.0)).at(1), 2);
+    EXPECT_EQ(m.multiply(Vector(0.0, 3.0)).at(0), 6);
+    EXPECT_EQ(m.multiply(Vector(0.0, 3.0)).at(1), 0);
+}

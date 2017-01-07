@@ -127,6 +127,7 @@ void Matrix::print(std::ostream &out) const {
  * @return The product
  */
 Vector Matrix::multiply(const Vector &b) const {
-    // TODO : Add logic
-    return b;
+    double x = this->matrix[0][0] * b.at(0) + this->matrix[0][1] * b.at(1);
+    double y = this->matrix[1][0] * b.at(0) + this->matrix[1][1] * b.at(1);
+    return Vector(x, y);
 }
