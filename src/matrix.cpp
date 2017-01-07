@@ -79,8 +79,8 @@ double &Matrix::at(size_t row, size_t col) {
 void Matrix::print(std::ostream &out) const {
     out << std::endl;
     for (int i = 0; i < 2; ++i) {
-        for (double n : matrix[i]) {
-            out << n << ' ';
+        for (int j = 0; j < 2; ++j) {
+            out << matrix[i][j] << ' ';
         }
         out << std::endl;
     }
