@@ -101,7 +101,12 @@ double &Matrix::at(size_t row, size_t col) {
  * @return A transposed matrix
  */
 Matrix Matrix::transpose() const {
-    return *this;
+    return Matrix(
+            this->matrix[0][0],
+            this->matrix[0][1],
+            this->matrix[1][0],
+            this->matrix[1][1]
+    );
 }
 
 /**

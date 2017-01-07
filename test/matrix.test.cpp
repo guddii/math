@@ -29,10 +29,18 @@ TEST(matrixTests, normTest) {
     EXPECT_EQ(m.norm(), 3);
 }
 
+TEST(matrixTests, transposeTest) {
+    Matrix m1(-1.0, 1.0, 2.0, 0.0);
+    EXPECT_EQ(m1.transpose().at(0, 0), -1);
+    EXPECT_EQ(m1.transpose().at(0, 1), 1);
+    EXPECT_EQ(m1.transpose().at(1, 0), 2);
+    EXPECT_EQ(m1.transpose().at(1, 1), 0);
+}
+
 TEST(matrixTests, multiplyTest) {
-    Matrix m(-1.0, 1.0, 2.0, 0.0);
-    EXPECT_EQ(m.multiply(Vector(2.0, 0.0)).at(0), -2);
-    EXPECT_EQ(m.multiply(Vector(2.0, 0.0)).at(1), 2);
-    EXPECT_EQ(m.multiply(Vector(0.0, 3.0)).at(0), 6);
-    EXPECT_EQ(m.multiply(Vector(0.0, 3.0)).at(1), 0);
+    Matrix m2(-1.0, 1.0, 2.0, 0.0);
+    EXPECT_EQ(m2.multiply(Vector(2.0, 0.0)).at(0), -2);
+    EXPECT_EQ(m2.multiply(Vector(2.0, 0.0)).at(1), 2);
+    EXPECT_EQ(m2.multiply(Vector(0.0, 3.0)).at(0), 6);
+    EXPECT_EQ(m2.multiply(Vector(0.0, 3.0)).at(1), 0);
 }

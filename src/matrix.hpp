@@ -27,9 +27,9 @@ public:
 
     double at(size_t row, size_t col) const;
 
-    double &at(size_t row, size_t col);
-
     double norm() const;
+
+    double &at(size_t row, size_t col);
 
     Matrix transpose() const;
 
