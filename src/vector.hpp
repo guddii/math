@@ -11,6 +11,7 @@
 #define VECTOR_H
 
 #include <iostream>
+#include <vector>
 
 class Vector {
 
@@ -32,7 +33,7 @@ public:
 
 private:
 
-    double coordinates[1];
+    std::vector<double> coordinates;
 
 };
 

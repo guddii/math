@@ -20,6 +20,7 @@
  *  @param y Y value
  */
 Vector::Vector(double x, double y) {
+    coordinates.resize(2);
     this->set(0, x);
     this->set(1, y);
 }
