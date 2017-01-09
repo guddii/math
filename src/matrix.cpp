@@ -8,7 +8,7 @@
  */
 
 #include "matrix.hpp"
-#include "cmath"
+#include <cmath>
 
 /**
  *  @brief Matrix constructor
@@ -16,10 +16,10 @@
  *  Construct a matrix containing
  *  the given parameters.
  *
- * @param a11 a_11 Value
- * @param a12 a_12 Value
- * @param a21 a_21 Value
- * @param a22 a_22 Value
+ * @param a11 First value on first row
+ * @param a12 Second value on first row
+ * @param a21 First value on second row
+ * @param a22 Second value on second row
  */
 Matrix::Matrix(double a11, double a12, double a21, double a22) {
 
